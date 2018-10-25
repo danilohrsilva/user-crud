@@ -1,0 +1,30 @@
+info:
+  app:
+    name: USER-CRUD
+    description: USER-CRUD - By danilohrsilva
+
+server:
+  port: 8090
+  http2: # Enable HTTP/2 support
+    enabled: true
+  compression: # Server compression
+    enabled: true
+    min-response-size: 2048
+    mime-types: application/json
+
+spring:
+  application:
+    name: user-crud
+
+  profiles:
+    active: dev
+
+  jackson:
+    deserialization:
+      FAIL_ON_NULL_FOR_PRIMITIVES: true
+
+# Logging
+logging:
+  level:
+    root: INFO
+  file: ./log/adao-inventory.log
